@@ -1,0 +1,93 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* AVATAR BOX */
+.avatar-box {
+  position: relative;
+  width: 320px;
+  height: 640px;
+  background: #222;
+  border-radius: 18px;
+  overflow: hidden;
+
+  --top-y: 24%;
+  --bottom-y: 50%;
+}
+
+/* AVATAR */
+#avatar {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* ÁO */
+#top {
+  position: absolute;
+  top: var(--top-y);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  z-index: 3;
+  display: none;
+}
+
+/* QUẦN */
+#bottom {
+  position: absolute;
+  top: var(--bottom-y);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  z-index: 2;
+  display: none;
+}
+
+/* PANEL */
+.panel {
+  width: 380px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.grid button {
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+}
